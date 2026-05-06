@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi | Recursion Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tower of Hanoi</h1>
+            <p class="subtitle">Recursive Algorithm Visualization</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-card">
+                <span class="label">Moves</span>
+                <span id="move-count" class="value">0</span>
+            </div>
+            <div class="stat-card highlight">
+                <span class="label">Recursion Depth</span>
+                <span id="depth-count" class="value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="label">Max Depth</span>
+                <span id="max-depth" class="value">0</span>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="pegs-container">
+                <div class="peg" id="peg-A">
+                    <div class="rod"></div>
+                    <div class="label">Peg A</div>
+                    <div class="disks"></div>
+                </div>
+                <div class="peg" id="peg-B">
+                    <div class="rod"></div>
+                    <div class="label">Peg B</div>
+                    <div class="disks"></div>
+                </div>
+                <div class="peg" id="peg-C">
+                    <div class="rod"></div>
+                    <div class="label">Peg C</div>
+                    <div class="disks"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="disk-slider">Disks: <span id="disk-val">4</span></label>
+                <input type="range" id="disk-slider" min="3" max="7" value="4">
+            </div>
+            <div class="button-group">
+                <button id="start-btn" class="btn primary">Start Recursion</button>
+                <button id="reset-btn" class="btn secondary">Reset</button>
+            </div>
+            <div class="speed-group">
+                <label for="speed-slider">Speed</label>
+                <input type="range" id="speed-slider" min="100" max="1000" value="500" step="100">
+            </div>
+        </div>
+
+        <div class="log-panel">
+            <h3>Algorithm Trace</h3>
+            <div id="trace-log" class="log-content">
+                <p class="placeholder">Waiting for start...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
